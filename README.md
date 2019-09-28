@@ -21,23 +21,24 @@ Run the Mansi_Ganatra_preprocess.py to generate the subset of dataset from yelp 
 # Running the algorithm
 # Task1
 # Command to run:
-spark-submit Mansi_Ganatra_task1.py <case number> <support> <input_file_path> <output_file_path>
+spark-submit Mansi_Ganatra_task1.py <case number> <support> <input_file_path> <output_file_path>  
 
 # Case 1:
-Calculating the combinations of frequent businesses (as singletons, pairs, triples, etc.) that are qualified as frequent given a support threshold. If a business was reviewed more than once by a reviewer, consider this product was rated only once. More specifically, the business ids within each basket are unique. The generated baskets are like:
+Calculating the combinations of frequent businesses (as singletons, pairs, triples, etc.) that are qualified as frequent given a support threshold. If a business was reviewed more than once by a reviewer, consider this product was rated only once. More specifically, the business ids within each basket are unique. The generated baskets are like:  
 user1: [business11, business12, business13, ...]  
 user2: [business21, business22, business23, ...]  
 user3: [business31, business32, business33, ...]  
 
 # Case 2:
-Calculating the combinations of frequent users (as singletons, pairs, triples, etc.) that are qualified as frequent given a support threshold. The user ids within each basket are unique. The generated baskets are like:
+Calculating the combinations of frequent users (as singletons, pairs, triples, etc.) that are qualified as frequent given a support threshold. The user ids within each basket are unique. The generated baskets are like:  
 business1: [user11, user12, user13, ...]  
 business2: [user21, user22, user23, ...]  
 business3: [user31, user32, user33, ...]  
 
 # Task2
 # Command to run:
-spark-submit Mansi_Ganatra_task2.py <filter threshold> <support> <input_file_path> <output_file_path>
+spark-submit Mansi_Ganatra_task2.py <filter threshold> <support> <input_file_path> <output_file_path>  
+  
 In this task, the user_business.csv generated in the step above is used. Filtered out qualified users who reviewed more than k businesses. (k is the filter threshold).
 The SON algorithm is applied as in case 1 mentioned above for the task 1# .
 
